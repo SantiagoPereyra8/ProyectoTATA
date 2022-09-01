@@ -1,0 +1,62 @@
+﻿@{
+    Layout = null;
+}
+
+<html>
+<head>
+    <!-- versión de desarrollo, incluye advertencias de ayuda en la consola -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <!------->
+    <div id="app">
+        {{ message }}
+    </div>
+    <!------->
+    <div id="app-2">
+         <span v-bind:title="message">
+         Mueva el mouse sobre mí durante unos segundos
+         para ver mi título enlazado dinámicamente.
+         </span>
+    </div>
+    <!------->
+    <div id="app-3">
+        <span v-if="seen">Ahora me ves</span>
+    </div>
+    <!------->
+    <div id="app-4">
+        <ol>
+            <li v-for="todo in todos">
+                {{ todo.text }}
+            </li>
+        </ol>
+    </div>
+    <!------->
+    <div id="app-5">
+        <p>{{ message }}</p>
+        <button v-on:click="reverseMessage">Mensaje invertido</button>
+    </div>
+    <!------->
+    <div id="app-6">
+        <p>{{ message }}</p>
+        <input v-model="message">
+    </div>
+    <!------->
+    <ol>
+  <!-- Crea una instancia del componente todo-item -->
+        <todo-item></todo-item>
+    </ol>
+
+
+    <script src="~/js/vue.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

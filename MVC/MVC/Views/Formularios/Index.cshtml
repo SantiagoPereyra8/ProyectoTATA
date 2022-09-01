@@ -1,0 +1,17 @@
+﻿@model MVC.Models.Datospers
+
+<h1>FORMULARIO</h1>
+
+<form action="Formularios/FormRequest" method="post">
+    <label for ="fname">Ingrese su nombre:</label><br />
+    <input type="text" id="fname" name="nombre1" value="@Model.Nombre" /><br />
+    <label for="fname">Ingrese su apellido:</label><br />
+    <input type="text" id="lname" name="apellido1" value="@Model.Apellido"/><br />
+    <label for="fname">Ingrese su edad:</label><br />
+    <input type="text" id="lname" name="edad1" value="@Model.Edad"/><br />
+    <button type="submit">Enviar</button>
+
+    
+</form>
+
+

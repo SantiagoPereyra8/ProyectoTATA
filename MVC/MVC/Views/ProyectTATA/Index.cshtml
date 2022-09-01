@@ -1,0 +1,117 @@
+﻿@model IEnumerable<MVC.Models.ProyectTata>
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>ROTISERIA</title>
+        <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+ <!-- Template Main CSS File -->
+
+ <link rel="stylesheet" href="/assets/css/tata.css"
+    </head>
+    
+    <body>
+
+        <div class="head">
+            <div class="logo">
+                <img src="/assets/img/rotiseria.jpg" height=" 60px"; width="60px"/>
+            </div>
+            <nav class="navbar">
+                <a class="nav-link scrollto" href="#Inicio">Inicio</a>                
+                <a class="nav-link scrollto" href="#Productos">Productos</a>
+                <a class="nav-link scrollto" href="#Precio">Precio</a>
+                <a class="nav-link scrollto" href="#Contacto">Contacto</a>
+            </nav>
+        </div>
+
+        <header class="content header">
+            <h2 class="title">Inicio</h2>
+            <div class="btn-home">                              
+            </div> 
+            <a><img src="~/assets/img/rotiseria.jpg" width="200px"height="200px";align="center";/></a>
+        </header>
+        
+        <section class="content sau">
+            <h2 class="title">Productos</h2>          
+            <div class="container text-center">
+                <div class="row">
+                  <div class="col">
+                     <img src="~/assets/img/milanesa.jpg"/>
+                  </div>
+                  <div class="col">
+                    <img src="~/assets/img/lomito.jpg"/>
+                  </div>
+                  <div class="col">
+                    <img src="~/assets/img/hamburguesa.jpg"/>
+                  </div>
+                  </div>
+                </div>
+        </section>
+
+        <section class="content price">
+            <article class="contain">
+                <h2 class="title">Precio</h2>
+               <table class="table">
+                   <thead>
+                     <tr>
+                       <th>@Html.DisplayNameFor(model => model.id)</th>
+                       <th>@Html.DisplayNameFor(model => model.producto)</th>
+                       <th>@Html.DisplayNameFor(model => model.detalle)</th>
+                       <th>@Html.DisplayNameFor(model => model.precio)</th>
+                     </tr>
+                   </thead>
+                   <tbody>
+                    @foreach(var item in Model)
+                    {
+                         <tr>
+                           <td><h4><a href="@("/proyecttata/eltata?id=" + item.id)">@Html.DisplayFor(modelItem => item.id)</a></h4></td>
+                           <td>@Html.DisplayFor(modelItem => item.producto)</td>
+                           <td>@Html.DisplayFor(modelItem => item.detalle)</td>
+                           <td>@Html.DisplayFor(modelItem => item.precio)</td>
+                         </tr>                         
+                    }
+                    
+                   </tbody>
+               </table>               
+            </article>            
+        </section>
+
+
+        <section class="content contact">
+            <h2 class="title">Contacto</h2>
+            <p><button type="button" class="btn btn-secondary btn-lg">#0000000</button></p>
+            <figure class="map">
+            <img src="/assets/img/mapa-roti1.png" height="400px" width="100%" alt="mapa "/>
+            </figure>
+        </section>
+
+
+
+
+        <footer>
+        <section>
+            <div class="content footer">
+                <article class="content">
+        
+                   <ul class="list-unstyled">                  
+                     <ul>
+                       <li>Direccion (//////////)</li>
+                       <li>RED (//////////)</li>
+                       <li>Gracias por visitar la pagina.</li>
+                     </ul>                   
+                  </ul>
+                 </article>
+            </div>
+        
+        </section>
+        </footer>
+
+ <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    </body>
+    
+</html> 
